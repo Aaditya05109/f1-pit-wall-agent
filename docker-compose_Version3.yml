@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  f1-pit-wall:
+    build: .
+    container_name: f1-pit-wall-agent
+    ports:
+      - "5000:5000"
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - FLASK_ENV=production
+      - SECRET_KEY=${SECRET_KEY}
+      - FLASK_DEBUG=0
+    volumes:
+      - ./flask_session:/app/flask_session
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

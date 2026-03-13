@@ -1,0 +1,109 @@
+═══════════════════════════════════════════════════════════════════
+F1 PIT WALL - SETUP INSTRUCTIONS
+═══════════════════════════════════════════════════════════════════
+
+FILES YOU HAVE:
+✅ app.py
+✅ requirements.txt
+✅ docker-compose.yml
+✅ index.html
+✅ INSTRUCTIONS.txt (this file)
+
+═══════════════════════════════════════════════════════════════════
+STEP 1: CREATE FOLDER
+═══════════════════════════════════════════════════════════════════
+
+Create a folder on your computer called: f1-pit-wall
+
+Inside it, create a subfolder called: templates
+
+Your structure should look like:
+  f1-pit-wall/
+  ├── app.py
+  ├── requirements.txt
+  ├── docker-compose.yml
+  └── templates/
+      └── index.html
+
+═══════════════════════════════════════════════════════════════════
+STEP 2: SAVE FILES IN RIGHT PLACES
+═══════════════════════════════════════════════════════════════════
+
+1. Save app.py → f1-pit-wall/app.py
+2. Save requirements.txt → f1-pit-wall/requirements.txt
+3. Save docker-compose.yml → f1-pit-wall/docker-compose.yml
+4. Save index.html → f1-pit-wall/templates/index.html
+
+═══════════════════════════════════════════════════════════════════
+STEP 3: CREATE GITHUB ACCOUNT & REPO
+═══════════════════════════════════════════════════════════════════
+
+1. Go to: https://github.com/new
+2. Fill in:
+   - Repository name: f1-pit-wall
+   - Description: F1 Race Weekend Summarizer
+   - Visibility: Public
+3. Click "Create repository"
+
+═══════════════════════════════════════════════════════════════════
+STEP 4: UPLOAD FILES TO GITHUB
+═══════════════════════════════════════════════════════════════════
+
+1. Go to your new GitHub repo
+2. Click "Add file" → "Upload files"
+3. Drag your files into the upload area:
+   - app.py
+   - requirements.txt
+   - docker-compose.yml
+   - templates/index.html (upload the index.html file from templates folder)
+4. Click "Commit changes"
+
+═══════════════════════════════════════════════════════════════════
+STEP 5: DEPLOY TO VERCEL
+═══════════════════════════════════════════════════════════════════
+
+1. Go to: https://vercel.com/new
+2. Click "Import Git Repository"
+3. Search for: f1-pit-wall (your repo)
+4. Click "Import"
+5. Set Environment Variable:
+   - Name: ANTHROPIC_API_KEY
+   - Value: sk-ant-xxxxx (paste your API key from Anthropic)
+6. Click "Deploy"
+
+═══════════════════════════════════════════════════════════════════
+STEP 6: SHARE WITH FRIENDS
+═══════════════════════════════════════════════════════════════════
+
+After deployment, you'll get a link like:
+https://f1-pit-wall.vercel.app
+
+Send this to your friends! They can use it directly in browser.
+No installation needed!
+
+═══════════════════════════════════════════════════════════════════
+TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════
+
+ERROR: "Could not access repository"
+FIX: Make sure you created the GitHub repo FIRST
+
+ERROR: "ANTHROPIC_API_KEY not found"
+FIX: Go to Vercel settings → Environment Variables
+     Make sure ANTHROPIC_API_KEY is set correctly
+
+ERROR: "Deployment failed"
+FIX: Check that all 4 files were uploaded to GitHub
+
+═══════════════════════════════════════════════════════════════════
+NEED YOUR API KEY?
+═══════════════════════════════════════════════════════════════════
+
+1. Go to: https://console.anthropic.com
+2. Sign in with your account
+3. Click "API Keys"
+4. Create a new key
+5. Copy it (starts with sk-ant-)
+6. Paste in Vercel environment variables
+
+═══════════════════════════════════════════════════════════════════
